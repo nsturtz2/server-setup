@@ -8,4 +8,10 @@ mkidr cron
 cd cron
 mkdir cron.d cron.w cron.h cron.m
 cd ..
-wget 
+mkdir installer
+cd installer
+wget https://raw.githubusercontent.com/Sturtz-Network/server-setup/master/netdata.sh
+chmod 777 *
+./netdata.sh
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install lightdm
