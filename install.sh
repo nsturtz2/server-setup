@@ -12,3 +12,8 @@ apt install unzip tree mlocate -y
 unzip nextcloud-19.0.1.zip
 chown -R www-data:www-data /var/www/nextcloud
 chown -R www-data:www-data /data
+sudo apt-get update -y
+sudo apt-get install software-properties-common -y
+sudo add-apt-repository universe -y
+sudo apt-get update -y
+sudo apt-get install certbot python3-certbot-apache python3
