@@ -16,5 +16,5 @@ sudo apt-get update -y
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository universe -y
 sudo apt-get update -y
-sudo apt-get install certbot python3-certbot-apache python3
+sudo apt-get install certbot python3-certbot-apache python3 -y 
 reboot
