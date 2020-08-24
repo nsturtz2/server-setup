@@ -15,8 +15,10 @@ chown -R www-data:www-data *
 cd /
 chown -R www-data:www-data data
 bash <(curl -Ss https://my-netdata.io/kickstart.sh) --stable-channel --disable-telemetry
+sudo netdata-claim.sh -token=GArtxDhzl_0ZY-1M36s_NJaKSQbMZC8yfgYoF6LxYQhfGVPmNjiUht8ur_3GqOd8XN1hZonSju6wVvCCd7Kz_LZK2-ZrtS3uIJwtV1NvhdI_FzNDo4olpghK-v9emiM07z9nRqU -rooms=074f1e95-65d9-47ed-b4ff-345316b28bd4 -url=https://app.netdata.cloud
 sudo chown -R www-data:www-data /var/www/nextcloud/
 sudo -u www-data php occ  maintenance:install --database "mysql" --database-name "nextcloud"  --database-user "username" --database-pass "password" --admin-user "admin" --admin-pass "password" --data-dir="/data"
 sudo snap install --classic certbot
 cd /NSCS
 rm nextcloud.sql
+wall Done Script!
