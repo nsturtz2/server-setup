@@ -2,7 +2,7 @@
 cd /
 mkdir NSCS
 cd /NSCS
-sudo apt update
+sudo apt update -y
 sudo apt install apache2 mariadb-server libapache2-mod-php7.4 tree unzip zip bind9 mlocate -y
 sudo apt install php7.4-gd php7.4-mysql php7.4-curl php7.4-mbstring php7.4-intl -y
 sudo apt install php7.4-gmp php7.4-bcmath php-imagick php7.4-xml php7.4-zip -y
@@ -21,4 +21,9 @@ sudo -u www-data php occ  maintenance:install --database "mysql" --database-name
 sudo snap install --classic certbot
 cd /NSCS
 rm nextcloud.sql
+echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list
+wget -q -O- http://www.webmin.com/jcameron-key.asc | sudo apt-key add -y
+sudo apt update -y
+sudo apt install webmin -y
+wall Done!
 wall Done Script!
