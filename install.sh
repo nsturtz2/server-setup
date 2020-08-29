@@ -45,5 +45,6 @@ wall Done with NSCS
 cd /etc/bind
 cp db.127 db.192
 cp db.192 db.sturtz.ml
+Wall done with Bind9 configuring
 wall Done Script!
 rm /home/nsturtz/install.sh
