@@ -3,7 +3,7 @@ cd /
 mkdir NSCS
 cd /NSCS
 sudo apt update -y
-sudo apt install apache2 mariadb-server libapache2-mod-php7.4 tree unzip zip bind9 mlocate -y
+sudo apt install apache2 mariadb-server libapache2-mod-php7.4 tree unzip zip bind9 mlocate  tasksel -y
 sudo apt install php7.4-gd php7.4-mysql php7.4-curl php7.4-mbstring php7.4-intl -y
 sudo apt install php7.4-gmp php7.4-bcmath php-imagick php7.4-xml php7.4-zip -y
 wall Done Installing!
@@ -11,9 +11,9 @@ wget https://raw.githubusercontent.com/Sturtz-Network/server-setup/master/nextcl
 mysql < nextcloud.sql
 rm nextcloud.sql
 cd /var/www/
-wget https://download.nextcloud.com/server/releases/nextcloud-19.0.1.zip
-unzip nextcloud-19.0.1.zip
-rm -r nextcloud-19.0.1.zip html
+https://download.nextcloud.com/server/releases/nextcloud-21.0.2.zip
+unzip nextcloud-21.0.2.zip
+rm -r nextcloud-21.0.2.zip html
 chown -R www-data:www-data nextcloud
 cd nextcloud
 sudo chown -R www-data:www-data /data
@@ -42,9 +42,6 @@ cd /NSCS/cron/cron.m
 touch cron
 chmod -R +X /NSCS
 wall Done with NSCS
-cd /etc/bind
-cp db.127 db.192
-cp db.192 db.sturtz.ml
-Wall done with Bind9 configuring
+sudo tasksel install ubuntu-desktop
+wall taskel done 
 wall Done Script!
-rm /home/nsturtz/install.sh
