@@ -5,10 +5,14 @@ cd /NSCS
 sudo apt update -y
 sudo apt install apache2 mariadb-server libapache2-mod-php7.4 tree unzip zip bind9 mlocate -y
 sudo apt install php7.4-gd php7.4-mysql php7.4-curl php7.4-mbstring php7.4-intl -y
-sudo apt install php7.4-gmp php7.4-bcmath php-imagick php7.4-xml php7.4-zip -y
-sudo apt install weechat tasksel -y 
+sudo apt install php7.4-gmp php7.4-bcmath php-imagick php7.4-xml php7.4-zip  -y
+sudo apt install weechat tasksel snap -y 
 wall Done Installing!
-wget https://raw.githubusercontent.com/Sturtz-Network/server-setup/master/nextcloud.sql
+sudo snap install core; sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+wall done with snap and certbot
+wget https://raw.githubusercontent.com/nsturtz2/server-setup/master/nextcloud.sql
 mysql < nextcloud.sql
 cd /var/www/
 https://download.nextcloud.com/server/releases/nextcloud-21.0.2.zip
