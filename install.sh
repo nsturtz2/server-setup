@@ -15,7 +15,7 @@ wall done with snap and certbot
 wget https://raw.githubusercontent.com/nsturtz2/server-setup/master/nextcloud.sql
 mysql < nextcloud.sql
 cd /var/www/
-https://download.nextcloud.com/server/releases/nextcloud-21.0.2.zip
+wget https://download.nextcloud.com/server/releases/nextcloud-21.0.2.zip
 unzip nextcloud-21.0.2.zip
 rm -r nextcloud-21.0.2.zip html
 chown -R www-data:www-data nextcloud
