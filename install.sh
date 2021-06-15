@@ -25,7 +25,7 @@ sudo -u www-data php /var/www/nextcloud/occ  maintenance:install --database "mys
 wall Nextcloud is done Installing
 cd /
 sudo snap install --classic certbot
-echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list
+echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
 wget -q -O- http://www.webmin.com/jcameron-key.asc | sudo apt-key add 
 sudo apt update -y
 sudo apt install webmin -y
