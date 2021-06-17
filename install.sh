@@ -3,7 +3,7 @@ cd /
 mkdir NSCS
 cd /NSCS
 sudo apt update -y
-sudo apt install apache2 mariadb-server libapache2-mod-php7.4 tree unzip zip bind9 mlocate -y
+sudo apt install apache2 mysql-server mysql-client libapache2-mod-php7.4 tree unzip zip bind9 mlocate -y
 sudo apt install php7.4-gd php7.4-mysql php7.4-curl php7.4-mbstring php7.4-intl -y
 sudo apt install php7.4-gmp php7.4-bcmath php-imagick php7.4-xml php7.4-zip  -y
 sudo apt install weechat tasksel snap -y 
@@ -12,17 +12,6 @@ sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 wall done with snap and certbot
-wget https://raw.githubusercontent.com/nsturtz2/server-setup/master/nextcloud.sql
-mysql < nextcloud.sql
-cd /var/www/
-wget https://download.nextcloud.com/server/releases/nextcloud-21.0.2.zip
-unzip nextcloud-21.0.2.zip
-rm -r nextcloud-21.0.2.zip html
-chown -R www-data:www-data nextcloud
-cd nextcloud
-sudo chown -R www-data:www-data /data
-sudo -u www-data php /var/www/nextcloud/occ  maintenance:install --database "mysql" --database-name "nextcloud"  --database-user "username" --database-pass "password" --admin-user "admin" --admin-pass "password" --data-dir="/data"
-wall Nextcloud is done Installing
 cd /
 sudo snap install --classic certbot
 echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
@@ -48,5 +37,4 @@ chmod -R +X /NSCS
 wall Done with NSCS
 sudo tasksel install ubuntu-desktop
 wall taskel done 
-
 wall Done Script!
